@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2022 at 12:12 PM
+-- Generation Time: Oct 04, 2022 at 02:11 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.0.23
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `animodb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `anonces`
+--
+
+CREATE TABLE `anonces` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `Disponibilite` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table des anonces utilisateurs';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categorie`
+--
+
+CREATE TABLE `categorie` (
+  `id` int(11) NOT NULL,
+  `Categorie` varchar(30) NOT NULL,
+  `Sous_categorie` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Table catégorie pour différencier les animaux';
 
 -- --------------------------------------------------------
 
@@ -41,6 +65,19 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `anonces`
+--
+ALTER TABLE `anonces`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_id_user` (`id_user`);
+
+--
+-- Indexes for table `categorie`
+--
+ALTER TABLE `categorie`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -51,10 +88,32 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `anonces`
+--
+ALTER TABLE `anonces`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `categorie`
+--
+ALTER TABLE `categorie`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `anonces`
+--
+ALTER TABLE `anonces`
+  ADD CONSTRAINT `FK_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
