@@ -33,13 +33,13 @@
                 <div class="card-body">
                     <ul class="tab-list">
                         <li class="tab-list__item active">
-                            <a class="tab-list__link" href="#tab1" data-toggle="tab">hotels</a>
+                            <a class="tab-list__link" href="#tab1" data-toggle="tab">Profile</a>
                         </li>
                         <li class="tab-list__item">
-                            <a class="tab-list__link" href="#tab2" data-toggle="tab">car</a>
+                            <a class="tab-list__link" href="#tab2" data-toggle="tab">Disponibilité</a>
                         </li>
                         <li class="tab-list__item">
-                            <a class="tab-list__link" href="#tab3" data-toggle="tab">flight</a>
+                            <a class="tab-list__link" href="#tab3" data-toggle="tab"></a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -117,43 +117,7 @@
                         </div>
                         <div class="tab-pane" id="tab2">
                             <form method="POST" action="#">
-                                <div class="input-group">
-                                    <label class="label">location:</label>
-                                    <input class="input--style-1" type="text" name="location" placeholder="Destination, hotel name" required="required">
-                                    <i class="zmdi zmdi-pin input-group-symbol"></i>
-                                </div>
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group">
-                                            <label class="label">driver age:</label>
-                                            <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
-                                            <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="driver-age">
-                                                    <option>23</option>
-                                                    <option>24</option>
-                                                    <option selected="selected">25</option>
-                                                    <option>26</option>
-                                                </select>
-                                                <div class="select-dropdown"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="input-group">
-                                            <label class="label">car group:</label>
-                                            <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
-                                            <div class="rs-select2 js-select-simple select--no-search">
-                                                <select name="car-group">
-                                                    <option selected="selected">Group S-car</option>
-                                                    <option>Group 1</option>
-                                                    <option>Group 2</option>
-                                                    <option>Group 3</option>
-                                                </select>
-                                                <div class="select-dropdown"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group">
@@ -165,7 +129,7 @@
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group">
-                                            <label class="label">time:</label>
+                                            <label class="label">De:</label>
                                             <i class="zmdi zmdi-time input-group-symbol"></i>
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select name="time-pickup">
@@ -190,7 +154,7 @@
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group">
-                                            <label class="label">time:</label>
+                                            <label class="label">A:</label>
                                             <i class="zmdi zmdi-time input-group-symbol"></i>
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select name="time-dropoff">
