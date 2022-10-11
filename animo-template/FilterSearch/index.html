@@ -45,41 +45,53 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <form method="POST" action="#">
-                                <div class="input-group">
-                                    <label class="label">Going to</label>
-                                    <input class="input--style-1" type="text" name="address" placeholder="Destination, hotel name" required="required">
-                                    <i class="zmdi zmdi-pin input-group-symbol"></i>
-                                </div>
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group">
-                                            <label class="label">check-in</label>
-                                            <input class="input--style-1" type="text" name="check-in" placeholder="mm/dd/yyyy" id="input-start">
-                                            <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="input-group">
-                                            <label class="label">check-out</label>
-                                            <input class="input--style-1" type="text" name="check-out" placeholder="mm/dd/yyyy" id="input-end">
-                                            <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Petsitter age:</label>
+                                        <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="driver-age">
+                                                <option> &lt 20</option>
+                                                <option selected="selected" >20 - 35</option>
+                                                <option >&gt 35</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Type d'animal:</label>
+                                        <i class="zmdi zmdi-calendar-alt input-group-symbol"></i>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="car-group">
+                                                <option selected="selected">Type d'animal</option>
+                                                <option>Domistique</option>
+                                                <option>Dangereux</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                
+                                
                                 <div class="input-group">
-                                    <label class="label">travellers</label>
+                                    <label class="label">Capacité</label>
                                     <i class="zmdi zmdi-account-add input-group-symbol"></i>
                                     <div class="input-group-icon" id="js-select-special">
-                                        <input class="input--style-1" type="text" name="traveller" value="1 Adult, 0 Children, 1 Room" disabled="disabled" id="info">
+                                        <input class="input--style-1" type="text" name="traveller" value="0 Chiens, 0 Chats, 0 Oiseaux" disabled="disabled" id="info">
                                         <i class="zmdi zmdi-chevron-down input-icon"></i>
                                     </div>
                                     <div class="dropdown-select">
                                         <ul class="list-room">
                                             <li class="list-room__item">
-                                                <span class="list-room__name">Room 1</span>
+                                                <span class="list-room__name">Nombre animaux</span>
                                                 <ul class="list-person">
                                                     <li class="list-person__item">
-                                                        <span class="name">Adults</span>
+                                                        <span class="name">Chiens</span>
                                                         <div class="quantity quantity1">
                                                             <span class="minus">-</span>
                                                             <input class="inputQty" type="number" min="0" value="1">
@@ -87,7 +99,15 @@
                                                         </div>
                                                     </li>
                                                     <li class="list-person__item">
-                                                        <span class="name">Children</span>
+                                                        <span class="name">Chats</span>
+                                                        <div class="quantity quantity2">
+                                                            <span class="minus">-</span>
+                                                            <input class="inputQty" type="number" min="0" value="0">
+                                                            <span class="plus">+</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-person__item">
+                                                        <span class="name">Oiseaux</span>
                                                         <div class="quantity quantity2">
                                                             <span class="minus">-</span>
                                                             <input class="inputQty" type="number" min="0" value="0">
@@ -97,17 +117,14 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <div class="list-room__footer">
-                                            <a href="#" id="btn-add-room">Add room</a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="checkbox-row">
-                                    <label class="checkbox-container m-r-45">Add a flight
+                                    <label class="checkbox-container m-r-45">Motorisé
                                         <input type="checkbox" checked="checked" name="add-flight">
                                         <span class="checkmark"></span>
                                     </label>
-                                    <label class="checkbox-container">Add a car
+                                    <label class="checkbox-container">se déplace
                                         <input type="checkbox" name="add-car">
                                         <span class="checkmark"></span>
                                     </label>

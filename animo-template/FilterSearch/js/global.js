@@ -60,8 +60,8 @@
         var info = selectSpecial.find('#info');
         var dropdownSelect = selectSpecial.parent().find('.dropdown-select');
         var listRoom = dropdownSelect.find('.list-room');
-        var btnAddRoom = $('#btn-add-room');
-        var totalRoom = 1;
+        var btnAddRoom = $('.pluss');
+        var totalRoom = 0;
     
         selectSpecial.on('click', function (e) {
             e.stopPropagation();
@@ -140,7 +140,7 @@
                 '                                        <ul class="list-person">' +
                 '                                            <li class="list-person__item">' +
                 '                                                <span class="name">' +
-                '                                                    Adults' +
+                '                                                    Chiens' +
                 '                                                </span>' +
                 '                                                <div class="quantity quantity1">' +
                 '                                                    <span class="minus">' +
@@ -154,7 +154,7 @@
                 '                                            </li>' +
                 '                                            <li class="list-person__item">' +
                 '                                                <span class="name">' +
-                '                                                    Children' +
+                '                                                    Chats' +
                 '                                                </span>' +
                 '                                                <div class="quantity quantity2">' +
                 '                                                    <span class="minus">' +
@@ -205,18 +205,18 @@
         function updateRoom() {
             var totalAd = parseInt(countAdult());
             var totalChi = parseInt(countChildren());
-            var adults = 'Adult, ';
-            var rooms = 'Room';
+            var adults = 'Chiens, ';
+            var rooms = 'Oiseaux';
     
             if (totalAd > 1) {
-                adults = 'Adults, ';
+                adults = 'Chiens, ';
             }
     
             if (totalRoom > 1) {
-                rooms = 'Rooms';
+                rooms = 'Oiseaux';
             }
     
-            var infoText = totalAd + ' ' + adults + totalChi + ' ' + 'Children, ' + totalRoom + ' ' + rooms;
+            var infoText = totalAd + ' ' + adults + totalChi + ' ' + 'Chats, ' + totalRoom + ' ' + rooms;
     
             info.val(infoText);
         }
