@@ -27,8 +27,8 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-img-1 p-t-165 p-b-100">
-        <div class="wrapper wrapper--w720">
+    <div class="page-wrapper bg-img-1 p-t-165 p-b-100" style="padding: 0;">
+        <div class="wrapper wrapper--w720" style="padding-top: 10px;">
             <div class="card card-3">
                 <div class="card-body">
                     <ul class="tab-list">
@@ -45,6 +45,22 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <form method="POST" action="#">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                    <label class="label">Prix Min</label>
+                                    <input class="input--style-1" type="text" name="address" placeholder="5€/H" required="required">
+                                    <i class="zmdi zmdi-money input-group-symbol"></i>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                    <label class="label">Prix Max</label>
+                                    <input class="input--style-1" type="text" name="address" placeholder="20€/H" required="required">
+                                    <i class="zmdi zmdi-money input-group-symbol"></i>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
